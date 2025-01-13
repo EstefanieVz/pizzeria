@@ -14,6 +14,8 @@ class PizzaController extends Controller
     public function index()
     {
         //
+        $pizzas = Pizza::paginate(3);
+        return view('admin/pizzas/index',compact('pizzas'));
     }
 
     /**
@@ -22,6 +24,7 @@ class PizzaController extends Controller
     public function create()
     {
         //
+        return view('admin/pizzas/create');
     }
 
     /**
@@ -30,6 +33,9 @@ class PizzaController extends Controller
     public function store(Request $request)
     {
         //
+        $data=$request->all();
+        Pizza::create($data);
+        return to_route('pizzas.index')->with ('status','Pizza Registrada');
     }
 
     /**
@@ -38,6 +44,7 @@ class PizzaController extends Controller
     public function show(Pizza $pizza)
     {
         //
+        return view('admin/pizzas/show',compact('pizza'));
     }
 
     /**
@@ -46,6 +53,7 @@ class PizzaController extends Controller
     public function edit(Pizza $pizza)
     {
         //
+        echo view('admin/pizzas/edit',compact('pizza'));
     }
 
     /**
@@ -54,13 +62,21 @@ class PizzaController extends Controller
     public function update(Request $request, Pizza $pizza)
     {
         //
+        $data=$request->all();//Pasamos todos los datos
+        $pizza->update($data); //Actualizamos los datos en la base de datos
+        return to_route('pizzas.index')->with ('status','Pizza Actualizada');
     }
 
     /**
      * Remove the specified resource from storage.
      */
+    public function delete(Pizza $address){
+        echo view('admin/pizzas/delete',compact('pizza'));
+    }
     public function destroy(Pizza $pizza)
     {
         //
+        $pizza->delete();
+        return to_route('pizzas.index')->with('status','Pizza Eliminada');
     }
 }
