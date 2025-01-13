@@ -47,9 +47,9 @@
         </p>
     </div>
 
-    <div class="centrar">
+   <!-- <div class="centrar">
         <img src="{{ asset('fondo/dulces.jpg') }}">
-    </div>
+    </div>-->
    
 </div>
 @endsection
