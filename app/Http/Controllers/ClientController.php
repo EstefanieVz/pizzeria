@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Client;
 use App\Http\Controllers\Controller;
+use App\Models\Address;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -14,7 +15,7 @@ class ClientController extends Controller
     public function index()
     {
         //
-        $addresses = Client::paginate(3);
+        $clients = Client::paginate(3);
         return view('admin/clients/index',compact('clients'));
     }
 
@@ -24,7 +25,8 @@ class ClientController extends Controller
     public function create()
     {
         //
-        return view('admin/clients/create');
+        $addresses=Address::pluck('id','street');
+        return view('admin/clients/create',compact('addresses'));
     }
 
     /**
@@ -53,7 +55,8 @@ class ClientController extends Controller
     public function edit(Client $client)
     {
         //
-        echo view('admin/clients/edit',compact('client'));
+        $addresses=Address::pluck('id','street');
+        echo view('admin/clients/edit',compact('client','addresses'));
     }
 
     /**
@@ -70,7 +73,7 @@ class ClientController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function delete(Client $address){
+    public function delete(Client $client){
         echo view('admin/clients/delete',compact('client'));
     }
     public function destroy(Client $client)

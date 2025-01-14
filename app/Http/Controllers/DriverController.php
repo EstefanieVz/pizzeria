@@ -14,6 +14,8 @@ class DriverController extends Controller
     public function index()
     {
         //
+        $drivers = Driver::paginate(3);
+        return view('admin/drivers/index',compact('drivers'));
     }
 
     /**
@@ -22,6 +24,7 @@ class DriverController extends Controller
     public function create()
     {
         //
+        return view('admin/drivers/create');
     }
 
     /**
@@ -30,6 +33,9 @@ class DriverController extends Controller
     public function store(Request $request)
     {
         //
+        $data=$request->all();
+        Driver::create($data);
+        return to_route('drivers.index')->with ('status','Repartidor Registrado');
     }
 
     /**
@@ -38,6 +44,7 @@ class DriverController extends Controller
     public function show(Driver $driver)
     {
         //
+        return view('admin/drivers/show',compact('driver'));
     }
 
     /**
@@ -46,6 +53,7 @@ class DriverController extends Controller
     public function edit(Driver $driver)
     {
         //
+        echo view('admin/drivers/edit',compact('driver'));
     }
 
     /**
@@ -54,13 +62,22 @@ class DriverController extends Controller
     public function update(Request $request, Driver $driver)
     {
         //
+        $data=$request->all();//Pasamos todos los datos
+        $driver->update($data); //Actualizamos los datos en la base de datos
+        return to_route('drivers.index')->with ('status','Repartidor Actualizado');
     }
 
     /**
      * Remove the specified resource from storage.
      */
+
+     public function delete(Driver $driver){
+        echo view('admin/drivers/delete',compact('driver'));
+    }
     public function destroy(Driver $driver)
     {
         //
+        $driver->delete();
+        return to_route('drivers.index')->with('status','Repartidor Eliminado');
     }
 }
