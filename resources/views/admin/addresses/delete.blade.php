@@ -1,6 +1,9 @@
 @extends('layout.main_template')
 @section('content')
-
+<br>
+<br><br>
+<div class="div">
+    <br><br>
 <center>
     <table>
         <thead>
@@ -22,6 +25,8 @@
         </tbody>
     </table>
 </center>
+</div>
+</header>
 @endsection
 
 <style>
@@ -29,7 +34,7 @@
         width: 50px;
         padding: 8px 16px;
         margin-block-start: 32px;
-        border: 1px solid #000;
+        border: 1px solid #ff8000;
         border-radius: 5px;
         display: block;
         color: #fff;
@@ -37,9 +42,15 @@
     }
     h3{
         width: 100%;
+        color: rgb(255, 255, 255);
         height: 10px;
         font-weight: bold;
         font-family: Arial, Helvetica, sans-serif;
         display: inline-block;
     }
-</style>
+    .div{
+        background: #00000092;
+        align-items: center;
+        text-align: center;
+    }
+    </style>

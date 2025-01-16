@@ -43,7 +43,7 @@
         
             <a href="{{route('index')}}">Inicio</a>
             <a href="{{route('pizzas.index')}}">Pizzas</a>
-            <a href="{{route('clients.index')}}">Clientes</a>
+            <a href="{{route('addresses.index')}}">Direcciones</a>
             <a href="{{route('orders.index')}}">Ordenes</a>
         
     </nav>

@@ -2,6 +2,9 @@
 @section('content')
 @include('fragments.formstyle')
 <style>
+  .div{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7));
+    }
     .formregistro{
   width:250px;
   height: 600px;
@@ -9,9 +12,17 @@
   border-radius: 12px;
   margin-block:auto;
   margin-inline:auto;
-  background-color:#f06575;
+  background-color:#ff8000;
   }
+  .re{
+        background-color: white; border: 2px solid #ff9800;
+    }
+    .re:hover{
+        background: #000000; color: rgb(252, 147, 0);
+    }
   </style>
+  <div class="div">
+    <br><br>
 <h1 id="titulo"> Editar Direcciones</h1>
 
 <form action="{{route('addresses.update',$address->id)}}" method="POST" enctype="multipart/form-data" class="formregistro">
@@ -48,4 +59,7 @@
 
     <button type="submit">Registrar</button>
 </form>
+<br><br>
+</div>
+<br><br>
 @endsection

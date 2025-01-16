@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style>
     .colore{
-        background: #f06575;
+        background:  #ff8000;
     }
     .topcentral{
         text-align: center;
@@ -15,7 +15,7 @@
     .container{
         max-width: 1840px;
         width: 100%;
-        background:#f0dddf;
+        background:#565656;
         box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
     }
     .container h2{
@@ -28,7 +28,7 @@
         border-collapse: collapse;
     }
     .tbl thead{
-        background: #f06c7c;
+        background:  #ff8000;
         color: #000000;
     }
     .tbl thead th{
@@ -36,17 +36,23 @@
         padding: 0.8rem;
         letter-spacing: 0.2rem;
         vertical-align: top;
-        border: 1px solid #f09ca6;
+        border: 1px solid #ff8000;
     }
     .tbl tbody tr td{
         font-size: 1rem;
         letter-spacing: 0.2rem;
         font-weight: normal;
         text-align: center;
-        border: 1px solid #f09ca6
+        border: 1px solid #e59444
     }
     a{
         text-decoration: none;
+    }
+    .re{
+        background-color: rgba(77, 76, 76, 0); border: 2px solid #000000;
+    }
+    .re:hover{
+        background: #000000; color: white;
     }
     @media(max-width: 768px){
         .tbl thead{
@@ -67,54 +73,42 @@
     }
 </style>
 <div class="topcentral">
-    
-        <h2>DIRECCIONES DE LOS CLIENTES</h2>
-
-
+        <h2>CLIENTES FRECUENTES</h2>
 <br>
-<button><a href="{{route('addresses.create')}}">Crear Dirección</a></button>
-
-<!--<button><a href="{{route('clients.create')}}">Crear Clientes</a></button>
-<button><a href="{{route('clients.index')}}">Ver Clientes</a></button>-->
+<button class="re"><a href="{{route('clients.create')}}" style="color: white">Crear Clientes</a></button>
 <br>
 </div>
 <br><br>
 <div class="container">
     <div class="tbl_container">
         <div class="colore">
-        <h2>Direcciones</h2>
+        <h2>Clientes</h2>
         </div>
 <table class="tbl">
     <thead>
-        <th > Calle</th>
-        <th> No. Interno </th>
-        <th> No. Externo </th>
-        <th> Vecindario </th>
-        <th> Ciudad </th>
-        <th> Estado </th>
-        <th> País </th>
-        <th> Código Postal </th>
-        <th> Referencias </th>
+        <th > Nombre </th>
+        <th> Apellido Paterno </th>
+        <th> Apellido Materno </th>
+        <th> Dirección </th>
+        <th> Correo </th>
+        <th> Teléfono </th>
         <th> Acciones </th>
     </thead>
 
     <tbody>
-        @foreach ($addresses as $a)
+        @foreach ($clients as $c)
         <tr>
-            <td>{{$a->street}}</td>
-            <td>{{$a->internal_num}}</td>
-            <td>{{$a->external_num}}</td>
-            <td>{{$a->neighborhood}}</td>
-            <td>{{$a->town}}</td>
-            <td>{{$a->state}}</td>
-            <td>{{$a->country}}</td>
-            <td>{{$a->postal_code}}</td>
-            <td>{{$a->references}}</td>
+            <td>{{$c->name}}</td>
+            <td>{{$c->last_name}}</td>
+            <td>{{$c->second_last_name}}</td>
+            <td>{{$c->client->client}}</td>
+            <td>{{$c->email}}</td>
+            <td>{{$c->phone}}</td>
             
             <td>
-                <button><a class="fa-solid fa-magnifying-glass" href="{{route("addresses.show",$a)}}"></a></button>
-                <button><a class="fa-solid fa-pen-to-square" href="{{route("addresses.edit",$a)}}"></a></button>
-                <button><a class="fa-solid fa-trash" href="{{route("addresses.delete",$a)}}"></a></button>
+                <button class="re"><a class="fa-solid fa-magnifying-glass" href="{{route("addresses.show",$a)}}" style="color: white"></a></button>
+                <button class="re"><a class="fa-solid fa-pen-to-square" href="{{route("addresses.edit",$a)}}" style="color: white"></a></button>
+                <button class="re"><a class="fa-solid fa-trash" href="{{route("addresses.delete",$a)}}" style="color: white"></a></button>
                 
             </td>
         </tr>

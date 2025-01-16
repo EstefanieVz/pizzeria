@@ -108,9 +108,9 @@
             <td>{{$p->unit_price}}</td>
             
             <td>
-                <button><a class="fa-solid fa-magnifying-glass" href="{{route("pizzas.show",$p)}}"></a></button>
-                <button><a class="fa-solid fa-pen-to-square" href="{{route("pizzas.edit",$p)}}"></a></button>
-                <button><a class="fa-solid fa-trash" href="{{route("pizzas.delete",$p)}}"></a></button>
+                <button class="re"><a class="fa-solid fa-magnifying-glass" href="{{route("pizzas.show",$p)}}" style="color: white"></a></button>
+                <button class="re"><a class="fa-solid fa-pen-to-square" href="{{route("pizzas.edit",$p)}}" style="color: white"></a></button>
+                <button class="re"><a class="fa-solid fa-trash" href="{{route("pizzas.delete",$p)}}" style="color: white"></a></button>
                 
             </td>
         </tr>

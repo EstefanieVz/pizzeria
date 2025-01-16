@@ -71,7 +71,7 @@ class PizzaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function delete(Pizza $address){
+    public function delete(Pizza $pizza){
         echo view('admin/pizzas/delete',compact('pizza'));
     }
     public function destroy(Pizza $pizza)
