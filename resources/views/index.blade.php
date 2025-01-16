@@ -18,38 +18,64 @@
     .textcentrar{
         text-align: center
     }
+    .containe{
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .header-content{
+        text-align: center;
+    }
+    .header-content h1{
+        font-size: 75px;
+        line-height: 80px; color:rgb(255, 255, 255); 
+        text-transform: uppercase;
+        margin-bottom: 35px;
+    }
+    .header-content p{
+        font-size: 16px;
+        color: #c5c5c5;
+        padding: 0 250px;
+        margin-bottom: 25px;
+    }
+    .btn-1{
+        display:inline-block; padding: 11px 35px;
+        background-color: #ce9678;
+        color: #fafafa ;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    .btn-1:hover{
+        background-color: #cc8259;
+    }
 </style>
-<h1 class="textcentrar">¡Bienvenidos a DULMEX, tu tienda de dulces mexicanos favorita!</h1>
+<br><br>
+<div class="header-content containe header">
+        <h1>Los diferentes tipo de pizza</h1>
+        <p class="txt-p">¡Descubre el sabor de la auténtica pizza italiana en PizzArt! Nuestra pasión es crear pizzas únicas y deliciosas que te harán querer volver por más. Explora nuestra carta, conoce nuestras promociones y ¡ordena ahora mismo!</p>
+<a href="#" class="btn-1">Informacion</a>
+
+</div>
+<br><br><br><br>
+</header>
+
+
+<br><br><br>
+<h1 class="textcentrar" style="color: #fafafa">¡Bienvenidos a PizzArt!</h1>
+<h2 class="textcentrar" style="color: #fafafa">¿Estás listo para disfrutar de la mejor pizza de la ciudad?</h2>
 <div class="cuadro">
 
-    <div class="centrar">
-        
-        <p>En nuestro país, los dulces son una parte fundamental de nuestra cultura y tradición.
-            Desde los clásicos alegrías y cocadas, hasta los deliciosos dulces de leche y frutas, 
-            cada uno de nuestros productos es una explosión de sabor y color que te transportará a la infancia.
-        </p>
-        <p>
-            En DULMEX, nos apasiona compartir con ustedes la riqueza y diversidad de los dulces mexicanos. 
-            Nuestros productos son elaborados con amor y cuidado, utilizando solo los ingredientes más frescos y de alta calidad.
-        </p>
-        <p>
-            Nuestra tienda es un lugar donde la tradición y la innovación se unen para crear experiencias únicas y deliciosas. 
-            Desde nuestros clásicos dulces de leche y cajeta, hasta nuestras creaciones más innovadoras como los dulces de frutas 
-            y especias, cada uno de nuestros productos es una muestra de la pasión y el amor que ponemos en todo lo que hacemos.
-        </p>
-        <p>
-            ¿Estás listo para descubrir el mundo de los dulces mexicanos? 
-            ¡Explora nuestra tienda y encuentra tus favoritos! Nuestros productos están disponibles para compra en línea, 
-            y también puedes visitarnos en nuestra tienda física para probar nuestros deliciosos dulces.
-        </p>
-        <p>
-            ¡Gracias por elegir DULMEX! Estamos emocionados de compartir nuestra pasión por los dulces mexicanos con ustedes."
-        </p>
+    <div class="centrar" style="color: #e7ddc6">
+        <p>Nuestra pasión por la pizza nos lleva a seleccionar solo los ingredientes frescos y de alta calidad para crear recetas únicas y sabrosas. Desde clásicos favoritos hasta creaciones innovadoras, tenemos algo para todos los gustos.</p>
+        <p>Explora nuestro menú y descubre nuestras pizzas más populares, como la clásica Margarita, la sabrosa Quattro Formaggi o la innovadora Pizza de Camarón. También ofrecemos opciones vegetarianas y veganas, así como pizzas sin gluten.</p>
+        <p>¿Quieres disfrutar de tu pizza en casa? ¡No hay problema! Ofrecemos servicio de entrega a domicilio y recogida en tienda. Simplemente elige tu pizza y déjanos hacer el resto.</p>     
+        <p>En PizzArt, nos emociona servirte y convertirnos en tu pizzería favorita.</p>       
+        <p>¡Disfruta de tu pizza!</p>
     </div>
 
-   <!-- <div class="centrar">
-        <img src="{{ asset('fondo/dulces.jpg') }}">
-    </div>-->
+   <div class="centrar">
+        <img src="{{ asset('fondo/dulces.png') }}" style="weight:500px; height:500px;">
+    </div>
    
 </div>
 @endsection

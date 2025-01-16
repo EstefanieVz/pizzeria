@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Orders\StoreRequest;
 use App\Models\Address;
 use App\Models\Client;
 use App\Models\Pizza;
@@ -36,7 +37,7 @@ class OrderController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
         //
         $data=$request->all();

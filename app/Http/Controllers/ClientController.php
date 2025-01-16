@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Client;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Clients\StoreRequest;
 use App\Models\Address;
 use Illuminate\Http\Request;
 
@@ -32,7 +33,7 @@ class ClientController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
         //
         $data=$request->all();

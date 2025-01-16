@@ -2,7 +2,9 @@
 @section('content')
 @include('fragments.formstyle')
 
-<h1 id="titulo"> Create de Direcciones</h1>
+<div class="div">
+    <br><br>
+<h1 id="titulo"> Crear Nueva Pizza</h1>
 
 @if ($errors->any())
     @foreach ($errors->all() as $e)
@@ -12,47 +14,44 @@
     @endforeach
 @endif
 <style>
+    .div{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7));
+    }
       .formregistro{
-    width:250px;
-    height: 600px;
+    width:300px;
+    height: 300px;
     padding-inline:20px;
     border-radius: 12px;
     margin-block:auto;
     margin-inline:auto;
-    background-color:#f06575;
+    background-color:#ff8000;
+    } 
+    .re{
+        background-color: white; border: 2px solid #ff9800;
+    }
+    .re:hover{
+        background: #000000; color: rgb(252, 147, 0);
     }
     </style>
-<form action="{{route('addresses.store')}}" enctype="multipart/form-data" method="POST" class="formregistro">
+    
+<form action="{{route('pizzas.store')}}" enctype="multipart/form-data" method="POST" class="formregistro">
     @csrf
     <br>
-    <label for="" class="">Calle</label>
-    <input type="text" name="street">
+    <label for="" class="">Nombre</label>
+    <input type="text" name="name">
 
-    <label for="" class="">No. Interno</label>
-    <input type="number" name="internal_num">
+    <label for="" class="">Descripción</label>
+    <input type="text" name="description">
 
-    <label for="" class="">No. Externo</label>
-    <input type="number" name="external_num">
+    <label for="" class="">Imagen</label>
+    <input type="file" name="image">
 
-    <label for="" class="">Vecindario</label>
-    <input type="text" name="neighborhood">
+    <label for="" class="">Precio</label>
+    <input type="number" name="unit_price">
 
-    <label for="" class="">Ciudad</label>
-    <input type="text" name="town">
-
-    <label for="" class="">Estado</label>
-    <input type="text" name="state">
-
-    <label for="" class="">País</label>
-    <input type="text" name="country">
-
-    <label for="" class="">Código Postal</label>
-    <input type="number" name="postal_code">
-
-    <label for="" class="">Referencia</label>
-    <input type="text" name="references">
-
-
-    <button type="submit">Registrar</button>
+    <button type="submit" class="re">Registrar</button>
 </form>
+<br><br>
+</div>
+<br><br>
 @endsection

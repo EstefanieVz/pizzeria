@@ -9,11 +9,12 @@
     border-radius: 12px;
     margin-block:auto;
     margin-inline:auto;
-    background-color:#f08b97;
+    background-color:#d7791a;
     }
   
     #titulo{
         text-align: center;
+        color: #ffffff;
     }
     form label{
     width:140px;
@@ -27,7 +28,7 @@
     padding-block: 3px;
     border: 1px solid #ffffff;
     border-radius: 3px;
-    background-color: #f06c7c;
+    background-color: #d7791a;
     color: #fff;
     margin-block: 4px;
     display:flex;

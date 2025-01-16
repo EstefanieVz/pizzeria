@@ -7,7 +7,7 @@
     <title>PizzArt</title>
 </head>
 
-<body style="background-color:#f0ccd0" >
+<body style="background-color:#474545" >
     
     @include('fragments.navbar')
     

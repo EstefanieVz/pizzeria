@@ -12,39 +12,24 @@
   background-color:#f06575;
   }
   </style>
-<h1 id="titulo"> Editar Direcciones</h1>
+<h1 id="titulo"> Editar Receta de Pizza</h1>
 
-<form action="{{route('addresses.update',$address->id)}}" method="POST" enctype="multipart/form-data" class="formregistro">
+<form action="{{route('pizzas.update',$pizza->id)}}" method="POST" enctype="multipart/form-data" class="formregistro">
     @csrf
     @method('PUT')
     <br>
-    <label for="" class="">Calle</label>
-    <input type="text" name="street" value="{{$address->street}}">
+    <label for="" class="">Nombre</label>
+    <input type="text" name="name" value="{{$pizza->name}}">
 
 
-    <label for="" class="">No. Interno</label>
-    <input type="number" name="internal_num" value="{{$address->internal_num}}">
+    <label for="" class="">Descripción</label>
+    <input type="text" name="description" value="{{$pizza->description}}">
 
-    <label for="" class="">No. Externo</label>
-    <input type="number" name="external_num" value="{{$address->external_num}}">
+    <label for="" class="">Imagen</label>
+    <input type="file" name="image" value="{{$pizza->image}}">
 
-    <label for="" class="">Vecindario</label>
-    <input type="text" name="neighborhood" value="{{$address->neighborhood}}">
-
-    <label for="" class="">Ciudad</label>
-    <input type="text" name="town" value="{{$address->town}}">
-
-    <label for="" class="">Estado</label>
-    <input type="text" name="state" value="{{$address->state}}">
-
-    <label for="" class="">País</label>
-    <input type="text" name="country" value="{{$address->country}}">
-
-    <label for="" class="">Código Postal</label>
-    <input type="number" name="postal_code" value="{{$address->postal_code}}">
-
-    <label for="" class="">Referencia</label>
-    <input type="text" name="references" value="{{$address->references}}">
+    <label for="" class="">Precio</label>
+    <input type="text" name="unit_price" value="{{$pizza->unit_price}}">
 
     <button type="submit">Registrar</button>
 </form>

@@ -1,47 +1,52 @@
 <style>
-
     header{
-        background: #f06c7c;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url('fondo/fondop.jpg');
         padding-block: 4px;
         margin-block: -8px;
         margin-inline: -8px;
+        background-position:center bottom;
+        background-repeat:no-repeat;
+        background-size:cover;
+        min-height:70vh;
     }  
-    nav p a{
+    .menu{
+        display: grid; 
+        grid-template-columns: repeat(4,1fr);
+    }
+    nav a{
+        padding: 20px;
+        font-weight: 600;
         text-decoration:none;
         padding-block: 10px;
         padding-inline: 10px;
-        color:rgb(0, 0, 0);
+        color:rgb(255, 255, 255);
         margin-inline: -4px;
     }
-    nav p{
-        
+    nav a{
         font-family: Arial, Helvetica, sans-serif;
         font-size: 20px;
         padding-inline: 10px;
         text-justify:inter-word;
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
+        grid-auto-flow: column;
         text-align: center;
     }
-    nav p a:hover{
-        background: #f09ca6;
+    nav a:hover{
+        background: #ff8000;
         padding-block: 20px;
         padding-inline: 10px;
-        
     }
-    
 
 </style>
 
-<header>
-    <nav>
-        <p>
+<header class="header">
+    <nav class="menu">
+        
             <a href="{{route('index')}}">Inicio</a>
             <a href="{{route('pizzas.index')}}">Pizzas</a>
             <a href="{{route('clients.index')}}">Clientes</a>
             <a href="{{route('orders.index')}}">Ordenes</a>
-        </p>
+        
     </nav>
-</header>
+
 <br>
 <br>

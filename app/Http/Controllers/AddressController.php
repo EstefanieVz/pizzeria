@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Address;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Addresses\StoreRequest;
 use Illuminate\Http\Request;
 
 class AddressController extends Controller
@@ -30,7 +31,7 @@ class AddressController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
         //
         $data=$request->all();

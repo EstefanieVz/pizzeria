@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Driver;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Drivers\StoreRequest;
 use Illuminate\Http\Request;
 
 class DriverController extends Controller
@@ -30,7 +31,7 @@ class DriverController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
         //
         $data=$request->all();
