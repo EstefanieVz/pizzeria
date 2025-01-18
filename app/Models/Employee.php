@@ -10,5 +10,5 @@ class Employee extends Model
     //
     use HasFactory;
     protected $fillable=[
-        'name_e','last_name_e','second_last_name_e','salary','salary','hiring_date'];
+        'name_e','last_name_e','second_last_name_e','position','salary','hiring_date'];
 }

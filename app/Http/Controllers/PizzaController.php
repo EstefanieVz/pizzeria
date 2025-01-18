@@ -34,7 +34,15 @@ class PizzaController extends Controller
     public function store(StoreRequest $request)
     {
         //
-        $data=$request->all();
+        $data=$request->all();//Pasamos todos los datos
+        if(isset($data["image"])){//Si imagen es diferente de vacio
+            //Cambiar nombre al archivo a ugardar
+            //Variable de imagen  se le asiagna un nuevo nombre(el nombre del archivo.tiempo/fecha/hora. tipo(jpeg,jpg,png))
+            $data["image"]=$filename=time().".".$data["image"]->extension();
+            //Guardar imagen en la carpeta publica
+            $request->image->move(public_path("image/pizzas"),$filename);
+        }
+
         Pizza::create($data);
         return to_route('pizzas.index')->with ('status','Pizza Registrada');
     }
@@ -64,6 +72,13 @@ class PizzaController extends Controller
     {
         //
         $data=$request->all();//Pasamos todos los datos
+        if(isset($data["image"])){//Si imagen es diferente de vacio
+            //Cambiar nombre al archivo a ugardar
+            //Variable de imagen  se le asiagna un nuevo nombre(el nombre del archivo.tiempo/fecha/hora. tipo(jpeg,jpg,png))
+            $data["image"]=$filename=time().".".$data["image"]->extension();
+            //Guardar imagen en la carpeta publica
+            $request->image->move(public_path("image/pizzas"),$filename);
+        }
         $pizza->update($data); //Actualizamos los datos en la base de datos
         return to_route('pizzas.index')->with ('status','Pizza Actualizada');
     }

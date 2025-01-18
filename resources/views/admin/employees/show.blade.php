@@ -1,19 +1,24 @@
 @extends('layout.main_template')
 @section('content')
-
+<br><br>
 <style>
-    
-</style>
-<h1>Detalles de la dirección</h1>
-<h3>Calle: {{$address->street}}</h3>
-<h3>No. Interno: {{$address->internal_num}}</h3>
-<h3>No. Externo: {{$address->external_num}}</h3>
-<h3>Vecindario: {{$address->neighborhood}}</h3>
-<h3>Ciudad: {{$address->town}}</h3>
-<h3>Estado: {{$address->state}}</h3>
-<h3>País: {{$address->country}}</h3>
-<h3>Código Postal: {{$address->postal_code}}</h3>
-<h3>Referencia: {{$address->references}}</h3>
+    .div{
+        background-image: linear-gradient(rgb(255, 126, 40),rgba(255, 126, 40));
+        align-items: center;
+        text-align: center;
+    }
+    </style>
+<div class="div">
+    <br>
+<h1>Detalles del repartidor</h1>
+<h3>Nombre: {{$employee->name_e}}</h3>
+<h3>Apellido Paterno: {{$employee->last_name_e}}</h3>
+<h3>Apellido Materno: {{$employee->second_last_name_e}}</h3>
+<h3>Posición: {{$employee->position}}</h3>
+<h3>Salario Actual: {{$employee->salary}}</h3>
+<h3>Fecha de Contratación: {{$employee->hiring_date}}</h3>
+<br>
 <!-- TODO Show Image -->
-
+</div>
+<br>
 @endsection

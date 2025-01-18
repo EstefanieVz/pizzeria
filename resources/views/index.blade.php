@@ -51,9 +51,10 @@
 </style>
 <br><br>
 <div class="header-content containe header">
-        <h1>Los diferentes tipo de pizza</h1>
-        <p class="txt-p">¡Descubre el sabor de la auténtica pizza italiana en PizzArt! Nuestra pasión es crear pizzas únicas y deliciosas que te harán querer volver por más. Explora nuestra carta, conoce nuestras promociones y ¡ordena ahora mismo!</p>
-<a href="#" class="btn-1">Informacion</a>
+        <h1 class="oswald" style="font-size: 100px">Los diferentes tipo de</h1>
+        <h1 class="oswald" style="font-size: 100px">pizza</h1>
+        <p class="txt-p mulish">¡Descubre el sabor de la auténtica pizza italiana en PizzArt! Nuestra pasión es crear pizzas únicas y deliciosas que te harán querer volver por más. Explora nuestra carta, conoce nuestras promociones y ¡ordena ahora mismo!</p>
+<a href="#" class="btn-1 oswald">Informacion</a>
 
 </div>
 <br><br><br><br>
@@ -65,7 +66,7 @@
 <h2 class="textcentrar" style="color: #fafafa">¿Estás listo para disfrutar de la mejor pizza de la ciudad?</h2>
 <div class="cuadro">
 
-    <div class="centrar" style="color: #e7ddc6">
+    <div class="centrar mulish" style="color: #e7ddc6">
         <p>Nuestra pasión por la pizza nos lleva a seleccionar solo los ingredientes frescos y de alta calidad para crear recetas únicas y sabrosas. Desde clásicos favoritos hasta creaciones innovadoras, tenemos algo para todos los gustos.</p>
         <p>Explora nuestro menú y descubre nuestras pizzas más populares, como la clásica Margarita, la sabrosa Quattro Formaggi o la innovadora Pizza de Camarón. También ofrecemos opciones vegetarianas y veganas, así como pizzas sin gluten.</p>
         <p>¿Quieres disfrutar de tu pizza en casa? ¡No hay problema! Ofrecemos servicio de entrega a domicilio y recogida en tienda. Simplemente elige tu pizza y déjanos hacer el resto.</p>     
@@ -78,4 +79,6 @@
     </div>
    
 </div>
+
+
 @endsection

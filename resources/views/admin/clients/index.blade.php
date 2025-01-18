@@ -72,6 +72,7 @@
         }
     }
 </style>
+</header><br><br><br>
 <div class="topcentral">
         <h2>CLIENTES FRECUENTES</h2>
 <br>
@@ -101,14 +102,14 @@
             <td>{{$c->name}}</td>
             <td>{{$c->last_name}}</td>
             <td>{{$c->second_last_name}}</td>
-            <td>{{$c->client->client}}</td>
+            <td>{{$c->address->street}}</td>
             <td>{{$c->email}}</td>
             <td>{{$c->phone}}</td>
             
             <td>
-                <button class="re"><a class="fa-solid fa-magnifying-glass" href="{{route("addresses.show",$a)}}" style="color: white"></a></button>
-                <button class="re"><a class="fa-solid fa-pen-to-square" href="{{route("addresses.edit",$a)}}" style="color: white"></a></button>
-                <button class="re"><a class="fa-solid fa-trash" href="{{route("addresses.delete",$a)}}" style="color: white"></a></button>
+                <button class="re"><a class="fa-solid fa-magnifying-glass" href="{{route("clients.show",$c)}}" style="color: white"></a></button>
+                <button class="re"><a class="fa-solid fa-pen-to-square" href="{{route("clients.edit",$c)}}" style="color: white"></a></button>
+                <button class="re"><a class="fa-solid fa-trash" href="{{route("clients.delete",$c)}}" style="color: white"></a></button>
                 
             </td>
         </tr>
@@ -118,6 +119,6 @@
 </table>
 </div>
 </div>
-{{$addresses->links()}}<!-- GENERA LOS ENLACES DE CADA PÁGINA-->
+{{$clients->links()}}<!-- GENERA LOS ENLACES DE CADA PÁGINA-->
 
 @endsection
