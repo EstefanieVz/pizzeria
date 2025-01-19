@@ -12,19 +12,22 @@
   font-weight: <weight>;
   font-style: normal;
 }
+body{
+        overflow-x: hidden;
+    }
     header{
         background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url('fondo/fondop.jpg');
-        padding-block: 4px;
-        margin-block: -8px;
-        margin-inline: -8px;
+        width: 100%;
         background-position:center bottom;
         background-repeat:no-repeat;
         background-size:cover;
         min-height:70vh;
     }  
     .menus{
-        display: grid; 
-        grid-template-columns: repeat(5,1fr);
+        display: flex; 
+    }
+    .m{
+        width: 20%;
     }
     nav a{
         padding: 20px;
@@ -61,11 +64,11 @@
 <header class="header">
     <nav class="menus">
         
-            <a href="{{route('index')}}">Inicio</a>
-            <a href="{{route('pizzas.index')}}">Pizzas</a>
-            <a href="{{route('addresses.index')}}">Direcciones</a>
-            <a href="{{route('orders.index')}}">Ordenes</a>
-            <a href="{{route('drivers.index')}}">Repartidores</a>
+            <a href="{{route('index')}}" class="m">Inicio</a>
+            <a href="{{route('pizzas.index')}}" class="m">Pizzas</a>
+            <a href="{{route('addresses.index')}}" class="m">Direcciones</a>
+            <a href="{{route('orders.index')}}" class="m">Ordenes</a>
+            <a href="{{route('drivers.index')}}" class="m">Repartidores</a>
         
     </nav>
 

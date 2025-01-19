@@ -17,5 +17,5 @@
 
     @yield('content')
 </body>
-@include('fragments.footer')
+
 </html>

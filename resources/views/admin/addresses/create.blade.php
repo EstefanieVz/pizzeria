@@ -19,7 +19,7 @@
     }
       .formregistro{
     width:250px;
-    height: 600px;
+    height: 700px;
     padding-inline:20px;
     border-radius: 12px;
     margin-block:auto;

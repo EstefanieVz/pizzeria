@@ -7,7 +7,7 @@
       }
         .formregistro{
       width:300px;
-      height: 400px;
+      height: 450px;
       padding-inline:20px;
       border-radius: 12px;
       margin-block:auto;
