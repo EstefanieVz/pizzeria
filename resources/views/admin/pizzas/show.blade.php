@@ -11,30 +11,31 @@
 <style>
   .div{
       background-image: linear-gradient(rgb(255, 126, 40),rgba(255, 126, 40));
-  }
-  .sec{
     align-content: center;
     align-items: center;
   }
   </style>
-  <section class="sec">
-    
-<div class="card mb-3 div" style="max-width: 540px;">
-    <div class="row g-0 ">
-      <div class="col-md-4">
-        <img src="..." class="img-fluid rounded-start" alt="...">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">Detalles de la Pizza</h5>
-          <h3>Nombre: {{$pizza->name}}</h3>
-            <h3>Descripción: {{$pizza->description}}</h3>
-            <h3>Imagen:{{$pizza->image}}</h3>
-            <h3>Precio: {{$pizza->unit_price}}</h3>
-          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-        </div>
+<center>
+  <br><br>
+<div class="center card div" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/image/pizzas/{{$pizza->image}}" width="500px" alt="Pizza" class="img-fluid rounded-start">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Detalles de la Pizza</h5>
+        <p>Nombre: {{$pizza->name}}</p>
+            <p>Descripción: {{$pizza->description}}</p>
+            <p>Precio: {{$pizza->unit_price}}</p>
+        <p class="card-text"><small class="text-body-secondary">Ultima actualización</small></p>
       </div>
     </div>
   </div>
-</section>
+</div>
+</center>
+<br><br><br><br><br>
+<div>
+@include('fragments.footer')
+</div>
 @endsection

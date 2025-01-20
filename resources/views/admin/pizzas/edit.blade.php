@@ -3,7 +3,7 @@
 @include('fragments.formstyle')
 <style>
 .div{
-        background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7));
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url('.../fondo/fondop.jpg');
     }
       .formregistro{
     width:300px;
