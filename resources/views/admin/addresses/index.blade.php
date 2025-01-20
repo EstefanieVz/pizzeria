@@ -72,8 +72,11 @@
         }
     }
 </style>
-</header>
-<br><br>
+<center>
+    <br><br><br>
+<h1 class="oswald" style="font-size: 100px; color:white;">Revisa nuestras Direcciones.</h1>
+</center>
+</header><br>
 <div class="topcentral">
         <h2 style="color: rgb(30, 30, 30)">DIRECCIONES DE LOS CLIENTES</h2>
 <br>

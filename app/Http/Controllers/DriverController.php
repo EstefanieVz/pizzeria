@@ -15,7 +15,7 @@ class DriverController extends Controller
     public function index()
     {
         //
-        $drivers = Driver::paginate(3);
+        $drivers = Driver::paginate(10);
         return view('admin/drivers/index',compact('drivers'));
     }
 

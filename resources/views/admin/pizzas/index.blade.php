@@ -1,11 +1,18 @@
 @extends('layout.main_template')
-
 @section('content')
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style>
-    .colore{
+ .colore{
         background:  #ff8000;
     }
     .topcentral{
@@ -73,7 +80,11 @@
         }
     }
 </style>
-</header><br><br><br>
+<center>
+    <br>
+<h1 class="oswald" style="font-size: 100px; color:white;">PizzArt te ofrece...</h1>
+</center>
+</header><br>
 <div class="topcentral">
     
         <h2 style="color: rgb(30, 30, 30)">MIRA NUESTRO MENÚ EN PIZZART</h2>
@@ -120,7 +131,6 @@
 </table>
 </div>
 </div>
-
 {{$pizzas->links()}}<!-- GENERA LOS ENLACES DE CADA PÁGINA-->
-<br><br><br>
+        <br><br><br>
 @endsection

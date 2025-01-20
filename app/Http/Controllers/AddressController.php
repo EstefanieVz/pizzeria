@@ -15,7 +15,7 @@ class AddressController extends Controller
     public function index()
     {
         //
-        $addresses = Address::paginate(3);
+        $addresses = Address::paginate(10);
         return view('admin/addresses/index',compact('addresses'));
     }
 

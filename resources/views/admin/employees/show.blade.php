@@ -25,7 +25,7 @@
         color: #fff;
         background-color: #000;
     }
-    </style>s
+    </style>
 <center>
     <div class="card text-center div" style="max-width: 400px;">
         <div class="card-header">

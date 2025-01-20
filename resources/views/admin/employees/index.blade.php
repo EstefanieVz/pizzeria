@@ -72,7 +72,11 @@
         }
     }
 </style>
-</header><br><br><br>
+<center>
+    <br><br><br>
+<h1 class="oswald" style="font-size: 100px; color:white;">Nuestros Empleados.</h1>
+</center>
+</header><br>
 <div class="topcentral">
         <h2 style="color: rgb(30, 30, 30)">INFORMACIÓN DE LOS EMPLEADOS</h2>
 <br>

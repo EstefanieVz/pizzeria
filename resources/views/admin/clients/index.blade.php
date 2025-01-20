@@ -72,7 +72,11 @@
         }
     }
 </style>
-</header><br><br><br>
+<center>
+    <br><br><br>
+<h1 class="oswald" style="font-size: 100px; color:white;">Nuestros Clientes.</h1>
+</center>
+</header><br>
 <div class="topcentral">
         <h2>CLIENTES FRECUENTES</h2>
 <br>
@@ -120,5 +124,5 @@
 </div>
 </div>
 {{$clients->links()}}<!-- GENERA LOS ENLACES DE CADA PÁGINA-->
-
+<br><br><br>
 @endsection
