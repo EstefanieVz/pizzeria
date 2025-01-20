@@ -120,5 +120,5 @@
         </div>
         </div>
         {{$drivers->links()}}<!-- GENERA LOS ENLACES DE CADA PÁGINA-->
-        
+        <br><br><br>
         @endsection

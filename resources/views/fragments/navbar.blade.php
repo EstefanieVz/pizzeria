@@ -12,6 +12,7 @@
   font-weight: <weight>;
   font-style: normal;
 }
+
 body{
         overflow-x: hidden;
     }

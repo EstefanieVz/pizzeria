@@ -2,8 +2,8 @@
 @section('content')
 @include('fragments.formstyle')
 <style>
-.div{
-        background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url('.../fondo/fondop.jpg');
+.div1{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url('fondo/fon1.jpg');
     }
       .formregistro{
     width:300px;
@@ -21,10 +21,10 @@
         background: #000000; color: rgb(252, 147, 0);
     }
   </style>
-  <div class="div">
+  <div class="div1">
     <br><br>
 <h1 id="titulo"> Editar Receta de Pizza</h1>
-
+<br>
 <form action="{{route('pizzas.update',$pizza->id)}}" method="POST" enctype="multipart/form-data" class="formregistro">
     @csrf
     @method('PUT')

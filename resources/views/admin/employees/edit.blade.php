@@ -23,7 +23,7 @@
     </style>
     <div class="div">
       <br><br>
-<h1 id="titulo"> Editar Datos del Repartidor</h1>
+<h1 id="titulo"> Editar Datos del Empleado</h1>
 
 <form action="{{route('employees.update',$employee->id)}}" method="POST" enctype="multipart/form-data" class="formregistro">
     @csrf

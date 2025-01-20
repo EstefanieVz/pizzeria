@@ -29,6 +29,10 @@
     #titulo{
         text-align: center;
         color: #ffffff;
+        font-family: "Oswald", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
     }
     form label{
     width:140px;
